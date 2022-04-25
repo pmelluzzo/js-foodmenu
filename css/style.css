@@ -1,6 +1,7 @@
 *{
   font-family: "Gill Sans", sans-serif;
 }
+ol, ul {padding: 0;}
 
 h1 {
   text-transform: uppercase;
@@ -11,11 +12,14 @@ h1 {
 }
 
 h2 {
-
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 2rem;
 }
 
 h3 {
-  margin-top: 0;
+  font-weight: 400;
+  font-size: 1.5rem;
 }
 
 
@@ -65,8 +69,19 @@ h3 {
   text-align: center;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   margin: 4rem auto;
+}
+
+.daily-special {
+  flex: 1;
+}
+.daily-soup {
+  flex: 1;
+}
+.daily-special ul {
+  text-align: center;
+  list-style: none;
 }
 
 .aligncenter {
