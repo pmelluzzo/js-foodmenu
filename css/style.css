@@ -84,6 +84,11 @@ h3 {
   list-style: none;
 }
 
+.card {margin-bottom: 4rem;}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
 .aligncenter {
   text-align: center;
 }

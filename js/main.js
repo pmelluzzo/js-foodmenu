@@ -1,6 +1,6 @@
 // Paul said it doesn't matter so here is a comment block
 function createMenuHTML(food){
-  return `<div class="col">
+  return `<div class="col-3">
     <div class="card" style="width: 18rem;">
       <img src="https://place-hold.it/500" class="card-img-top" alt="">
       <div class="card-body">
@@ -12,4 +12,4 @@ function createMenuHTML(food){
   </div>`
 };
 
-document.getElementById('test').innerHTML = soupOfDay.map(food => createMenuHTML(food)).join('');
+document.getElementById('menu-list').innerHTML = soupOfDay.map(food => createMenuHTML(food)).join('');
