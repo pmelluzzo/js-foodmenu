@@ -13,6 +13,19 @@ function createMenuHTML(food){
     `;
 };
 
+function nutritionalFacts () {
+  return `
+    <div class="modal-bg modal-exit"></div>
+    <div class="modal-container">
+      <p id="modal-content">
+        ${menuItems[0].nutrition}
+      </p>
+      <button class="modal-close modal-exit">X</button>
+    </div>
+  `;
+};
+
+document.getElementById('modal-one').innerHTML = nutritionalFacts();
 document.getElementById('menu-list').innerHTML = menuItems.map(food => createMenuHTML(food)).join('');
 
 const modals = document.querySelectorAll("[data-modal]");
