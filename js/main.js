@@ -6,12 +6,12 @@ function createMenuHTML(food){
           <div class="card-body">
             <h3>${food.name}</h3>
             <p class="card-text">${food.des}</p>
-            <a data-modal="modal-one" class="btn btn-primary">View Nutritional Facts</a>
+            <a data-modal="modal-${food.name}" class="btn btn-primary">View Nutritional Facts</a>
           </div>
-          <div class="modal" id="modal-one">
+          <div class="modal" id="modal-${food.name}">
             <div class="modal-bg modal-exit"></div>
             <div class="modal-container">
-              <p id="modal-content">
+              <p class="modal-content">
                 ${food.nutrition}
               </p>
               <button class="modal-close modal-exit">X</button>
