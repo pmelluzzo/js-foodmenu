@@ -8,24 +8,34 @@ function createMenuHTML(food){
             <p class="card-text">${food.des}</p>
             <a data-modal="modal-one" class="btn btn-primary">View Nutritional Facts</a>
           </div>
+          <div class="modal" id="modal-one">
+            <div class="modal-bg modal-exit"></div>
+            <div class="modal-container">
+              <p id="modal-content">
+                ${food.nutrition}
+              </p>
+              <button class="modal-close modal-exit">X</button>
+            </div>
+          </div>
         </div>
       </div>
     `;
 };
 
-function nutritionalFacts () {
-  return `
-    <div class="modal-bg modal-exit"></div>
-    <div class="modal-container">
-      <p id="modal-content">
-        ${menuItems[0].nutrition}
-      </p>
-      <button class="modal-close modal-exit">X</button>
-    </div>
-  `;
-};
+// function nutritionalFacts () {
+//
+//   return `
+//     <div class="modal-bg modal-exit"></div>
+//     <div class="modal-container">
+//       <p id="modal-content">
+//         ${food.nutrition}
+//       </p>
+//       <button class="modal-close modal-exit">X</button>
+//     </div>
+//   `;
+// };
 
-document.getElementById('modal-one').innerHTML = nutritionalFacts();
+// document.getElementById('modal-one').innerHTML = menuItems.map(food => nutritionalFacts(food));
 document.getElementById('menu-list').innerHTML = menuItems.map(food => createMenuHTML(food)).join('');
 
 const modals = document.querySelectorAll("[data-modal]");
