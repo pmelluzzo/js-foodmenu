@@ -2,7 +2,7 @@ function createMenuHTML(food){
     return `
       <div class="col-3">
         <div class="card">
-          <img src="${food.img}" class="card-img-top" alt="" data-modal="modal-one">
+          <img src="${food.img}" class="card-img-top" alt="" data-modal="modal-${food.name}">
           <div class="card-body">
             <h3>${food.name}</h3>
             <p class="card-text">${food.des}</p>
@@ -21,19 +21,6 @@ function createMenuHTML(food){
       </div>
     `;
 };
-
-// function nutritionalFacts () {
-//
-//   return `
-//     <div class="modal-bg modal-exit"></div>
-//     <div class="modal-container">
-//       <p id="modal-content">
-//         ${food.nutrition}
-//       </p>
-//       <button class="modal-close modal-exit">X</button>
-//     </div>
-//   `;
-// };
 
 // document.getElementById('modal-one').innerHTML = menuItems.map(food => nutritionalFacts(food));
 document.getElementById('menu-list').innerHTML = menuItems.map(food => createMenuHTML(food)).join('');
